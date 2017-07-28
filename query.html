@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./lib.js"></script>
+    <script src="./report.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.head').load('nav.html');
+        });
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('queryForm').addEventListener("submit", function (event) {
+            event.preventDefault();
+            $("#gradeTable  tr:not(:first)").html("");
+            buildReport();
+            return false;
+        });
+    });
+</script>
+<div class="head container"></div>
+<div class="container" align="center">
+    <form id="queryForm" name="queryGradeForm">
+        <div class="input-group">
+            <label>学号</label>
+            <input type="text" name="StudentNo" class="input-sm"/>
+            <input type="submit" value="查询" class="btn btn-sm btn-primary"/>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <table id="gradeTable" class="table table-hover table-bordered table-striped table-condensed">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>数学</th>
+            <th>语文</th>
+            <th>英语</th>
+            <th>编程</th>
+            <th>总分</th>
+            <th>平均分</th>
+            <th>操作</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

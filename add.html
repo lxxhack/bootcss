@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+        <script src="./jquery-3.2.1.js"></script>
+        <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <script src="./lib.js"></script>
+        <script src="./student.js"></script>
+    </head>
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.head').load('nav.html');
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('addForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            addStudentAchievement();
+            return false;
+        })
+    });
+</script>
+<div class="head container"></div>
+<div class="container" align="center">
+    <form id="addForm" name="addGradeForm">
+        <div class="input-group">
+            <label>学号</label>
+            <input type="text" name="StudentNo" class="form-inline"/>
+        </div>
+        <div class="input-group">
+            <label>姓名</label>
+            <input type="text" name="Name" class="form-inline"/>
+        </div>
+        <div class="input-group">
+            <label>数学</label>
+            <input type="text" class="form-inline" name="math"/>
+        </div>
+        <div class="input-group">
+            <label>语文</label>
+            <input type="text" class="form-inline" name="Chinese"/>
+        </div>
+        <div class="input-group">
+            <label>英语</label>
+            <input type="text" class="form-inline" name="English"/>
+        </div>
+        <div class="input-group">
+            <label>编程</label>
+            <input type="text" class="form-inline" name="Program"/>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="提交" class="btn-success"/>
+        </div>
+    </form>
+</div>
+<body>
+</html>
